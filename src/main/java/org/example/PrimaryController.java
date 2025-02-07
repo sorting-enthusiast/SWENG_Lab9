@@ -1,6 +1,7 @@
 package org.example;
 
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -152,88 +153,88 @@ public class PrimaryController {
     private URL location;
 
     @FXML
-    private Button A;
+    private Button btnA;
 
     @FXML
-    private Button B;
+    private Button btnB;
 
     @FXML
-    private Button C;
+    private Button btnC;
 
     @FXML
-    private Button D;
+    private Button btnD;
 
     @FXML
-    private Button E;
+    private Button btnE;
 
     @FXML
-    private Button F;
+    private Button btnF;
 
     @FXML
-    private Button addBtn;
+    private Button btnAdd;
 
     @FXML
     private ComboBox<String> baseListBox;
 
     @FXML
-    private Button bitAnd;
+    private Button btnAnd;
 
     @FXML
-    private Button bitNot;
+    private Button btnNot;
 
     @FXML
-    private Button bitOr;
+    private Button btnOr;
 
     @FXML
-    private Button bitXor;
+    private Button btnXor;
 
     @FXML
-    private Button clearBtn;
+    private Button btnClear;
 
     @FXML
     private TextField consoleTF;
 
     @FXML
-    private Button divBtn;
+    private Button btnDiv;
 
     @FXML
-    private Button eightBtn;
+    private Button btn8;
 
     @FXML
-    private Button evalBtn;
+    private Button btnEval;
 
     @FXML
-    private Button fiveBtn;
+    private Button btn5;
 
     @FXML
-    private Button fourBtn;
+    private Button btn4;
 
     @FXML
-    private Button mulBtn;
+    private Button btnMul;
 
     @FXML
-    private Button nineBtn;
+    private Button btn9;
 
     @FXML
-    private Button oneBtn;
+    private Button btn1;
 
     @FXML
-    private Button sevenBtn;
+    private Button btn7;
 
     @FXML
-    private Button sixBtn;
+    private Button btn6;
 
     @FXML
-    private Button subBtn;
+    private Button btnSub;
 
     @FXML
-    private Button threeBtn;
+    private Button btn3;
 
     @FXML
-    private Button twoBtn;
+    private Button btn2;
 
     @FXML
-    private Button zeroBtn;
+    private Button btn0;
 
     @FXML
     void addA(ActionEvent event) {
@@ -383,27 +384,27 @@ public class PrimaryController {
 
     private void switchToBase() {
         boolean hex = base == 16;
-        A.setDisable(!hex);
-        B.setDisable(!hex);
-        C.setDisable(!hex);
-        D.setDisable(!hex);
-        E.setDisable(!hex);
-        F.setDisable(!hex);
+        btnA.setDisable(!hex);
+        btnB.setDisable(!hex);
+        btnC.setDisable(!hex);
+        btnD.setDisable(!hex);
+        btnE.setDisable(!hex);
+        btnF.setDisable(!hex);
         boolean dec_plus = base >= 10;
-        nineBtn.setDisable(!dec_plus);
-        eightBtn.setDisable(!dec_plus);
+        btn9.setDisable(!dec_plus);
+        btn8.setDisable(!dec_plus);
         boolean oct_plus = base >= 8;
-        sevenBtn.setDisable(!oct_plus);
-        sixBtn.setDisable(!oct_plus);
-        fiveBtn.setDisable(!oct_plus);
-        fourBtn.setDisable(!oct_plus);
-        threeBtn.setDisable(!oct_plus);
-        twoBtn.setDisable(!oct_plus);
+        btn7.setDisable(!oct_plus);
+        btn6.setDisable(!oct_plus);
+        btn5.setDisable(!oct_plus);
+        btn4.setDisable(!oct_plus);
+        btn3.setDisable(!oct_plus);
+        btn2.setDisable(!oct_plus);
         boolean binary = base == 2;
-        bitAnd.setDisable(!binary);
-        bitOr.setDisable(!binary);
-        bitXor.setDisable(!binary);
-        bitNot.setDisable(!binary);
+        btnAnd.setDisable(!binary);
+        btnOr.setDisable(!binary);
+        btnXor.setDisable(!binary);
+        btnNot.setDisable(!binary);
     }
     @FXML
     void chooseBase(ActionEvent event) {
@@ -415,7 +416,7 @@ public class PrimaryController {
             case "oct": newBase = 8; break;
             case "bin": newBase = 2; break;
         }
-        if (input != "") {
+        if (!Objects.equals(input, "")) {
             try {
                 int val = evalHelper();
                 input = newBase == 2 ? String.format("%8s", Integer.toBinaryString(val & 0xFF)).replace(' ', '0') : Integer.toString(val, newBase).toUpperCase();
@@ -459,49 +460,49 @@ public class PrimaryController {
 
     @FXML
     void initialize() {
-        assert A != null : "fx:id=\"A\" was not injected: check your FXML file 'primary.fxml'.";
-        assert B != null : "fx:id=\"B\" was not injected: check your FXML file 'primary.fxml'.";
-        assert C != null : "fx:id=\"C\" was not injected: check your FXML file 'primary.fxml'.";
-        assert D != null : "fx:id=\"D\" was not injected: check your FXML file 'primary.fxml'.";
-        assert E != null : "fx:id=\"E\" was not injected: check your FXML file 'primary.fxml'.";
-        assert F != null : "fx:id=\"F\" was not injected: check your FXML file 'primary.fxml'.";
-        assert addBtn != null : "fx:id=\"addBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnA != null : "fx:id=\"A\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnB != null : "fx:id=\"B\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnC != null : "fx:id=\"C\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnD != null : "fx:id=\"D\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnE != null : "fx:id=\"E\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnF != null : "fx:id=\"F\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnAdd != null : "fx:id=\"addBtn\" was not injected: check your FXML file 'primary.fxml'.";
         assert baseListBox != null : "fx:id=\"baseListBox\" was not injected: check your FXML file 'primary.fxml'.";
-        assert bitAnd != null : "fx:id=\"bitAnd\" was not injected: check your FXML file 'primary.fxml'.";
-        assert bitNot != null : "fx:id=\"bitNot\" was not injected: check your FXML file 'primary.fxml'.";
-        assert bitOr != null : "fx:id=\"bitOr\" was not injected: check your FXML file 'primary.fxml'.";
-        assert bitXor != null : "fx:id=\"bitXor\" was not injected: check your FXML file 'primary.fxml'.";
-        assert clearBtn != null : "fx:id=\"clearBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnAnd != null : "fx:id=\"bitAnd\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnNot != null : "fx:id=\"bitNot\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnOr != null : "fx:id=\"bitOr\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnXor != null : "fx:id=\"bitXor\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnClear != null : "fx:id=\"clearBtn\" was not injected: check your FXML file 'primary.fxml'.";
         assert consoleTF != null : "fx:id=\"consoleTF\" was not injected: check your FXML file 'primary.fxml'.";
-        assert divBtn != null : "fx:id=\"divBtn\" was not injected: check your FXML file 'primary.fxml'.";
-        assert eightBtn != null : "fx:id=\"eightBtn\" was not injected: check your FXML file 'primary.fxml'.";
-        assert evalBtn != null : "fx:id=\"evalBtn\" was not injected: check your FXML file 'primary.fxml'.";
-        assert fiveBtn != null : "fx:id=\"fiveBtn\" was not injected: check your FXML file 'primary.fxml'.";
-        assert fourBtn != null : "fx:id=\"fourBtn\" was not injected: check your FXML file 'primary.fxml'.";
-        assert mulBtn != null : "fx:id=\"mulBtn\" was not injected: check your FXML file 'primary.fxml'.";
-        assert nineBtn != null : "fx:id=\"nineBtn\" was not injected: check your FXML file 'primary.fxml'.";
-        assert oneBtn != null : "fx:id=\"oneBtn\" was not injected: check your FXML file 'primary.fxml'.";
-        assert sevenBtn != null : "fx:id=\"sevenBtn\" was not injected: check your FXML file 'primary.fxml'.";
-        assert sixBtn != null : "fx:id=\"sixBtn\" was not injected: check your FXML file 'primary.fxml'.";
-        assert subBtn != null : "fx:id=\"subBtn\" was not injected: check your FXML file 'primary.fxml'.";
-        assert threeBtn != null : "fx:id=\"threeBtn\" was not injected: check your FXML file 'primary.fxml'.";
-        assert twoBtn != null : "fx:id=\"twoBtn\" was not injected: check your FXML file 'primary.fxml'.";
-        assert zeroBtn != null : "fx:id=\"zeroBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnDiv != null : "fx:id=\"divBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btn8 != null : "fx:id=\"eightBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnEval != null : "fx:id=\"evalBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btn5 != null : "fx:id=\"fiveBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btn4 != null : "fx:id=\"fourBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnMul != null : "fx:id=\"mulBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btn9 != null : "fx:id=\"nineBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btn1 != null : "fx:id=\"oneBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btn7 != null : "fx:id=\"sevenBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btn6 != null : "fx:id=\"sixBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btnSub != null : "fx:id=\"subBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btn3 != null : "fx:id=\"threeBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btn2 != null : "fx:id=\"twoBtn\" was not injected: check your FXML file 'primary.fxml'.";
+        assert btn0 != null : "fx:id=\"zeroBtn\" was not injected: check your FXML file 'primary.fxml'.";
         baseListBox.getItems().add("bin");
         baseListBox.getItems().add("oct");
         baseListBox.getItems().add("dec");
         baseListBox.getItems().add("hex");
 
-        A.setDisable(true);
-        B.setDisable(true);
-        C.setDisable(true);
-        D.setDisable(true);
-        E.setDisable(true);
-        F.setDisable(true);
-        bitAnd.setDisable(true);
-        bitOr.setDisable(true);
-        bitXor.setDisable(true);
-        bitNot.setDisable(true);
+        btnA.setDisable(true);
+        btnB.setDisable(true);
+        btnC.setDisable(true);
+        btnD.setDisable(true);
+        btnE.setDisable(true);
+        btnF.setDisable(true);
+        btnAnd.setDisable(true);
+        btnOr.setDisable(true);
+        btnXor.setDisable(true);
+        btnNot.setDisable(true);
     }
 
 }
