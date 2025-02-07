@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
+   <children>
+      <ComboBox fx:id="baseListBox" layoutX="237.0" layoutY="109.0" onAction="#chooseBase" prefHeight="26.0" prefWidth="105.0" promptText="dec" />
+      <Button fx:id="oneBtn" layoutX="238.0" layoutY="151.0" mnemonicParsing="false" onAction="#addOne" prefHeight="26.0" prefWidth="43.0" text="1" />
+      <Button fx:id="twoBtn" layoutX="300.0" layoutY="151.0" mnemonicParsing="false" onAction="#addTwo" prefHeight="26.0" prefWidth="43.0" text="2" />
+      <Button fx:id="threeBtn" alignment="CENTER" layoutX="364.0" layoutY="151.0" mnemonicParsing="false" onAction="#addThree" prefHeight="26.0" prefWidth="43.0" text="3" />
+      <Button fx:id="fourBtn" layoutX="238.0" layoutY="187.0" mnemonicParsing="false" onAction="#addFour" prefHeight="26.0" prefWidth="43.0" text="4" />
+      <Button fx:id="fiveBtn" layoutX="300.0" layoutY="188.0" mnemonicParsing="false" onAction="#addFive" prefHeight="26.0" prefWidth="43.0" text="5" />
+      <Button fx:id="sixBtn" layoutX="364.0" layoutY="188.0" mnemonicParsing="false" onAction="#addSix" prefHeight="26.0" prefWidth="43.0" text="6" />
+      <Button fx:id="B" layoutX="173.0" layoutY="151.0" mnemonicParsing="false" onAction="#addB" prefHeight="26.0" prefWidth="43.0" text="B" />
+      <Button fx:id="C" layoutX="173.0" layoutY="188.0" mnemonicParsing="false" onAction="#addC" prefHeight="26.0" prefWidth="43.0" text="C" />
+      <Button fx:id="D" layoutX="173.0" layoutY="224.0" mnemonicParsing="false" onAction="#addD" prefHeight="26.0" prefWidth="43.0" text="D" />
+      <Button fx:id="sevenBtn" layoutX="238.0" layoutY="224.0" mnemonicParsing="false" onAction="#addSeven" prefHeight="26.0" prefWidth="43.0" text="7" />
+      <Button fx:id="eightBtn" layoutX="300.0" layoutY="224.0" mnemonicParsing="false" onAction="#addEight" prefHeight="26.0" prefWidth="43.0" text="8" />
+      <Button fx:id="nineBtn" layoutX="364.0" layoutY="224.0" mnemonicParsing="false" onAction="#addNine" prefHeight="26.0" prefWidth="43.0" text="9" />
+      <Button fx:id="E" layoutX="173.0" layoutY="260.0" mnemonicParsing="false" onAction="#addE" prefHeight="26.0" prefWidth="43.0" text="E" />
+      <Button fx:id="addBtn" layoutX="238.0" layoutY="260.0" mnemonicParsing="false" onAction="#addAdd" prefHeight="26.0" prefWidth="43.0" text="+" />
+      <Button fx:id="zeroBtn" layoutX="300.0" layoutY="260.0" mnemonicParsing="false" onAction="#addZero" prefHeight="26.0" prefWidth="43.0" text="0" />
+      <Button fx:id="subBtn" layoutX="364.0" layoutY="260.0" mnemonicParsing="false" onAction="#addSub" prefHeight="26.0" prefWidth="43.0" text="-" />
+      <Button fx:id="F" layoutX="173.0" layoutY="296.0" mnemonicParsing="false" onAction="#addF" prefHeight="26.0" prefWidth="43.0" text="F" />
+      <Button fx:id="mulBtn" layoutX="238.0" layoutY="296.0" mnemonicParsing="false" onAction="#addMul" prefHeight="26.0" prefWidth="43.0" text="*" />
+      <Button fx:id="divBtn" layoutX="300.0" layoutY="296.0" mnemonicParsing="false" onAction="#addDiv" prefHeight="26.0" prefWidth="43.0" text="/" />
+      <Button fx:id="evalBtn" layoutX="364.0" layoutY="296.0" mnemonicParsing="false" onAction="#evalExpr" prefHeight="26.0" prefWidth="43.0" text="=" />
+      <Button fx:id="bitXor" layoutX="173.0" layoutY="332.0" mnemonicParsing="false" onAction="#addXor" prefHeight="26.0" prefWidth="43.0" text="^" />
+      <Button fx:id="bitOr" layoutX="238.0" layoutY="332.0" mnemonicParsing="false" onAction="#addOr" prefHeight="26.0" prefWidth="43.0" text="|" />
+      <Button fx:id="bitAnd" layoutX="300.0" layoutY="332.0" mnemonicParsing="false" onAction="#addAnd" prefHeight="26.0" prefWidth="43.0" text="&amp;" />
+      <Button fx:id="bitNot" layoutX="364.0" layoutY="332.0" mnemonicParsing="false" onAction="#addNot" prefHeight="26.0" prefWidth="43.0" text="~" />
+      <Button fx:id="A" layoutX="173.0" layoutY="110.0" mnemonicParsing="false" onAction="#addA" prefHeight="26.0" prefWidth="43.0" text="A" />
+      <Button fx:id="clearBtn" layoutX="364.0" layoutY="110.0" mnemonicParsing="false" onAction="#clearInput" text="Clear" />
+      <TextField fx:id="consoleTF" layoutX="174.0" layoutY="69.0" prefHeight="26.0" prefWidth="234.0" />
+   </children>
+</AnchorPane>
